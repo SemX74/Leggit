@@ -1,0 +1,89 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+$FooterButtonHover: #e8e8e8;
+$ButtonBlue: #1484d6;
+svg:hover {
+  color: $ButtonBlue;
+}
+.App {
+  width: 100%;
+  height: fit-content;
+}
+.TopBar {
+  position: sticky;
+  top: 0;
+}
+.Post-Title {
+  font-size: 1.2em;
+  font-weight: 500;
+}
+.Post-Description {
+  margin-top: 0.5em;
+  position: relative;
+  z-index: 1;
+}
+.Post-Footer {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  background: #fff;
+  height: 20px;
+  .Post-Footer_button {
+    cursor: pointer;
+    margin: 0 0.4em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 15px;
+    background: transparent;
+    color: gray;
+    border: transparent;
+    svg {
+      font-size: 20px;
+    }
+    .Post-Footer_button:hover {
+      background: #e8e8e8;
+    }
+  }
+}
+.Home {
+  min-height: 100vh;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  .Home-Main {
+    margin-top: 20px;
+  }
+}
+.Popular {
+  min-height: 100vh;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  .Home-Main {
+    margin-top: 20px;
+  }
+}
+
+.Content-split {
+  display: flex;
+  justify-content: flex-start;
+}
+.Outlet {
+  overflow: auto;
+  background: #dae0e6;
+  height: 100%;
+  width: 100%;
+  padding-bottom: 10em;
+}
+
+.SideButton:hover {
+  color: red;
+}

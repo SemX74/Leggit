@@ -1,0 +1,112 @@
+$OrangeMain : #d16e4b;
+$OrangeInvalid: #78655d;
+
+.LoginWrapper {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  .LoginWrapper-left {
+    .BackMain{
+      padding-top: 1em;
+      margin: 1em;
+      color: #000;
+      background: transparent;
+      display: flex;
+      align-items: center;
+      border: transparent;
+      font-weight: 500;
+      font-size: 20px;
+      cursor: pointer;
+      svg{
+        margin: 0 .3em;
+      }
+    }
+    background: white;
+    height: 100vh;
+    width: 50%;
+    h3 {
+      font-weight: 200;
+      font-size: 2em;
+      text-align: center;
+    }
+    .LoginWrapper-title {
+      margin-top: 2em;
+      font-size: 5em;
+      text-align: center;
+    }
+
+    .formLogin {
+      display: flex;
+      flex-direction: column;
+      width: 50%;
+      margin: 4em auto;
+      label {
+        margin-left: 0.2em;
+        margin-bottom: 0.2em;
+        opacity: 50%;
+      }
+      .input {
+        font-size: 2em;
+        padding: 0.2em;
+        border: solid 1px rgba(0, 0, 0, 0.227);
+        border-radius: 5px;
+        margin-bottom: 0.2em;
+      }
+      .input:focus {
+        outline: dotted;
+        border: transparent;
+        outline-color: #d16e4b;
+      }
+      .error {
+        color: red;
+        margin: 0;
+      }
+      .submit {
+        border-radius: 20px;
+        font-size: 1.5em;
+        width: 5em;
+        margin: 0.2em auto;
+        height: 2em;
+        background: $OrangeMain;
+        border: 2px solid $OrangeMain;
+        transition: 0.2s;
+        color: #fff;
+      }
+      .submit:hover {
+        color: $OrangeMain;
+        background: #fff;
+        border: 2px solid $OrangeMain;
+      }
+      .invalid {
+        background: $OrangeInvalid;
+        color: white;
+        cursor: not-allowed;
+        border: #fff;
+      }
+      .invalid:hover {
+        border: #fff;
+        background: $OrangeInvalid;
+        color: white;
+      }
+      .alreadyEx {
+        text-align: center;
+      }
+      .link {
+        color: $OrangeMain;
+        text-decoration: underline;
+        cursor: pointer;
+      }
+      .link:active {
+        color: #6f4f2d;
+      }
+    }
+  }
+  .LoginWrapper-right {
+    background: url("../../Misc/reddit-2.webp");
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    width: 50%;
+  }
+}

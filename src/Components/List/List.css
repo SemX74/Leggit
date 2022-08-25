@@ -1,0 +1,79 @@
+.CommentList {
+  margin-top: 2em;
+}
+.CommentList .post_wrapper {
+  display: flex;
+  justify-content: flex-start;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+.CommentList .post_wrapper .sides {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+.CommentList .post_wrapper .sides .SideButton {
+  height: 100%;
+  width: 3em;
+  cursor: pointer;
+  border-right: 2px solid rgba(0, 0, 0, 0.152);
+  transition: color 0.3s;
+}
+.CommentList .post_wrapper .post {
+  max-width: 300px;
+  margin: 1em 0;
+}
+.CommentList .post_wrapper .post .Li {
+  list-style: none;
+  margin-left: 1em;
+}
+.CommentList .post_wrapper .post .Li h3 {
+  display: flex;
+  align-items: center;
+  font-weight: 500;
+}
+.CommentList .post_wrapper .post .Li h3 svg {
+  transform: scale(1.5);
+  margin-right: 0.5em;
+}
+.CommentList .post_wrapper .post .Li .Li-Footer {
+  margin-top: 0.15em;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.CommentList .post_wrapper .post .Li .Li-Footer .UpDown {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.CommentList .post_wrapper .post .Li .Li-Footer .UpDown svg {
+  opacity: 50%;
+  font-weight: 200;
+  transform: scale(1.2);
+  transition: color 0.2s;
+}
+.CommentList .post_wrapper .post .Li .Li-Footer .UpDown svg:first-child:hover {
+  color: green;
+}
+.CommentList .post_wrapper .post .Li .Li-Footer .UpDown svg:last-child:hover {
+  color: red;
+}
+.CommentList .post_wrapper .post .Li .Li-Footer .UpDown span {
+  font-weight: 600;
+  margin: 0 0.2em;
+  opacity: 70%;
+  vertical-align: middle;
+}
+.CommentList .post_wrapper .post .Li .Li-Footer button {
+  font-weight: 600;
+  width: 60px;
+  margin-left: 1em;
+  opacity: 65%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: transparent;
+  border: none;
+}/*# sourceMappingURL=List.css.map */

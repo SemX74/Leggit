@@ -1,0 +1,15 @@
+.Header-Logo {
+  margin-left: 20px;
+  margin-right: 20em;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  height: 100%;
+  width: 150px;
+}
+.Header-Logo svg {
+  color: purple;
+  width: 40px;
+  height: auto;
+  margin-right: 9px;
+}/*# sourceMappingURL=Logo.css.map */

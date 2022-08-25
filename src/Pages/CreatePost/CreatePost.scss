@@ -1,0 +1,68 @@
+$ButtonBlue: #1484d6;
+
+.CreatePostPage {
+    min-height: 80.4vh;
+    height: 100%;
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    h1 {
+      color: #000;
+      font-weight: 300;
+      font-size: 33px;
+      margin: 1em 0;
+    }
+    .CreatePost-Form_Wrapper {
+      height: fit-content;
+      width: 700px;
+      background: #fff;
+      border-radius: 5px;
+      padding: 1em;
+      input {
+        width: 100%;
+        padding: 0.3em 0.7em;
+        margin-bottom: 1em;
+        font-size: 17px;
+        outline: transparent;
+        font-weight: 100;
+        border-radius: 5px;
+        border: 1px solid rgba(0, 0, 0, 0.276);
+      }
+      .CreatePostFooter {
+        margin-top: 1em;
+        border-top: 2px solid rgba(0, 0, 0, 0.184);
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        padding: 1.2em;
+        .button {
+          text-decoration: none;
+          color: #fff;
+          background: $ButtonBlue;
+          border: 1px solid $ButtonBlue;
+          border-radius: 20px;
+          font-size: 17px;
+          font-weight: 600;
+          padding: 0.15em 1em;
+          cursor: pointer;
+          transition: 0.2s;
+        }
+        .button:hover {
+          background: #fff;
+          color: $ButtonBlue;
+        }
+        .button:disabled {
+          cursor: not-allowed;
+          background: gray;
+          border: 1px solid gray;
+        }
+        .button:disabled:hover {
+          background: gray;
+          border: 1px solid gray;
+          color: #fff;
+        }
+      }
+    }
+  }
+  

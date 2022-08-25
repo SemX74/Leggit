@@ -1,0 +1,43 @@
+$ButtonBlue: #1484d6;
+
+.NotFound-Wrapper {
+    display: flex;
+    height: 100vh;
+    background: rgb(116, 152, 190);
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 15em;
+    .NotFound {
+      background: #fff;
+      border-radius: 20px;
+      text-align: center;
+      padding: 2em 5em;
+      box-shadow: 5px 5px 10px 0 rgba(0, 0, 0, 0.158);
+      h1 {
+        opacity: 70%;
+      }
+      p {
+        margin-top: 2em;
+        margin-bottom: 1.5em;
+        opacity: 70%;
+      }
+      .button {
+        text-decoration: none;
+        color: #fff;
+        background: $ButtonBlue;
+        border: 1px solid $ButtonBlue;
+        border-radius: 20px;
+        font-size: 17px;
+        font-weight: 600;
+        padding: 0.15em 1em;
+        cursor: pointer;
+        transition: 0.2s;
+      }
+      .button:hover {
+        background: #fff;
+        color: $ButtonBlue;
+      }
+    }
+  }
+  
+  

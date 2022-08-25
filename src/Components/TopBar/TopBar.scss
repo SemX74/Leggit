@@ -1,0 +1,108 @@
+$ButtonBlue: #1484d6;
+
+.Header {
+  position: sticky;
+  top: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 50px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.112);
+  padding: 7px 0;
+  background: #fff;
+  z-index: 10000;
+}
+.Header-Search_wrapper {
+  width: 450px;
+  input {
+    width: 100%;
+    border: 1px solid rgba(0, 0, 0, 0.155);
+    border-radius: 50px;
+    padding: 10px 30px;
+    background: #f6f7f8;
+  }
+  input:focus {
+    outline: none;
+    border: 2px solid $ButtonBlue;
+  }
+  input:focus::placeholder {
+    color: transparent;
+  }
+}
+.Header-Registration_wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  .button {
+    margin: 0.4em;
+    border: 1px solid $ButtonBlue;
+    border-radius: 20px;
+    font-size: 17px;
+    padding: 0.15em 1em;
+    cursor: pointer;
+  }
+  .SignUp {
+    background: $ButtonBlue;
+    color: #fff;
+  }
+  .LogIn {
+    background: #fff;
+    color: $ButtonBlue;
+    transition: 0.2s;
+  }
+  .LogIn:hover {
+    background: #1485d618;
+  }
+}
+.Header-Profile {
+  position: relative;
+  width: 90px;
+  margin-right: 2em;
+  height: 100%;
+  transition: 0.2s;
+  .Header-Profile-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    transition: 0.2s;
+    padding: 0 20px;
+    svg {
+      height: 100%;
+      width: auto;
+    }
+  }
+}
+.HeaderMenu {
+  position: relative;
+  width: 190px;
+  transform: translateX(-80px);
+  .HeaderMenu_list {
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    .HeaderMenu_option {
+      display: flex;
+      align-items: center;
+      svg{
+        margin-right: .5em;
+      }
+
+      width: 100%;
+      color: #000;
+      text-decoration: none;
+      padding: .5em;
+      transition: 0.2s;
+    }
+    .HeaderMenu_option:hover {
+      background: $ButtonBlue;
+      color: #fff;
+    }
+  }
+}
+.Header-Profile:hover {
+  border: 1px solid rgba(0, 0, 0, 0.238);
+}

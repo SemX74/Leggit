@@ -1,0 +1,117 @@
+.Header {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 50px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.112);
+  padding: 7px 0;
+  background: #fff;
+  z-index: 10000;
+}
+
+.Header-Search_wrapper {
+  width: 450px;
+}
+.Header-Search_wrapper input {
+  width: 100%;
+  border: 1px solid rgba(0, 0, 0, 0.155);
+  border-radius: 50px;
+  padding: 10px 30px;
+  background: #f6f7f8;
+}
+.Header-Search_wrapper input:focus {
+  outline: none;
+  border: 2px solid #1484d6;
+}
+.Header-Search_wrapper input:focus::-moz-placeholder {
+  color: transparent;
+}
+.Header-Search_wrapper input:focus:-ms-input-placeholder {
+  color: transparent;
+}
+.Header-Search_wrapper input:focus::placeholder {
+  color: transparent;
+}
+
+.Header-Registration_wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.Header-Registration_wrapper .button {
+  margin: 0.4em;
+  border: 1px solid #1484d6;
+  border-radius: 20px;
+  font-size: 17px;
+  padding: 0.15em 1em;
+  cursor: pointer;
+}
+.Header-Registration_wrapper .SignUp {
+  background: #1484d6;
+  color: #fff;
+}
+.Header-Registration_wrapper .LogIn {
+  background: #fff;
+  color: #1484d6;
+  transition: 0.2s;
+}
+.Header-Registration_wrapper .LogIn:hover {
+  background: rgba(20, 133, 214, 0.0941176471);
+}
+
+.Header-Profile {
+  position: relative;
+  width: 90px;
+  margin-right: 2em;
+  height: 100%;
+  transition: 0.2s;
+}
+.Header-Profile .Header-Profile-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+  transition: 0.2s;
+  padding: 0 20px;
+}
+.Header-Profile .Header-Profile-wrapper svg {
+  height: 100%;
+  width: auto;
+}
+
+.HeaderMenu {
+  position: relative;
+  width: 190px;
+  transform: translateX(-80px);
+}
+.HeaderMenu .HeaderMenu_list {
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+.HeaderMenu .HeaderMenu_list .HeaderMenu_option {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  color: #000;
+  text-decoration: none;
+  padding: 0.5em;
+  transition: 0.2s;
+}
+.HeaderMenu .HeaderMenu_list .HeaderMenu_option svg {
+  margin-right: 0.5em;
+}
+.HeaderMenu .HeaderMenu_list .HeaderMenu_option:hover {
+  background: #1484d6;
+  color: #fff;
+}
+
+.Header-Profile:hover {
+  border: 1px solid rgba(0, 0, 0, 0.238);
+}/*# sourceMappingURL=TopBar.css.map */

@@ -1,0 +1,195 @@
+$ButtonBlue: #1484D6;
+.ModalPost-wrapper {
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    .ModalPost-TopBar {
+      position: sticky;
+      top: 0;
+      width: 100%;
+      z-index: 100;
+    }
+    .SinglePost-Background {
+      background: #000;
+      padding-bottom: 10em;
+      display: flex;
+      position: sticky;
+      justify-content: center;
+      align-items: flex-start;
+      background-size: contain;
+      background-attachment: fixed;
+      background-size: 110%;
+      width: 100%;
+      height: 100vh;
+      overflow: auto;
+  
+      .SinglePost {
+        background: #fafafa;
+        width: 80%;
+        height: fit-content;
+        padding-bottom: 2em;
+        .container {
+          margin: 3em auto;
+          width: 70%;
+          background: #fff;
+          height: fit-content;
+          display: flex;
+          justify-content: center;
+          align-items: flex-start;
+          .SinglePost-UpDown {
+            display: flex;
+            align-items: flex-start;
+            justify-content: flex-start;
+            margin-right: 0.2em;
+            .UpDown {
+              svg {
+                margin: 0.5em 0;
+                opacity: 50%;
+                font-weight: 200;
+                transform: scale(1.5);
+                transition: color 0.2s;
+              }
+              svg:first-child:hover {
+                color: green;
+              }
+              svg:last-child:hover {
+                color: red;
+              }
+              span {
+                font-weight: 600;
+                vertical-align: middle;
+              }
+              padding: 1em 0;
+              width: 100%;
+              display: flex;
+              flex-direction: column;
+              justify-content: flex-start;
+              align-items: center;
+            }
+          }
+  
+          .SinglePost-Post {
+            padding: 1em;
+            width: 90%;
+            .Post-Header {
+              display: flex;
+              justify-content: space-between;
+              align-items: center;
+              .Post-Header-Info_wrapper {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                .Post-Header_Info {
+                  font-size: 13px;
+                  font-weight: 700;
+                  span {
+                    opacity: 50%;
+                    font-weight: 400;
+                  }
+                }
+              }
+              .button {
+                margin: 0.4em;
+                color: #fff;
+                background: $ButtonBlue;
+                border: 1px solid $ButtonBlue;
+                border-radius: 20px;
+                font-size: 13px;
+                font-weight: 600;
+                padding: 0.15em 1em;
+                cursor: pointer;
+              }
+            }
+            .Post-Footer {
+              display: flex;
+              justify-content: flex-start;
+              align-items: center;
+              background: #fff;
+              height: 20px;
+              margin-top: 20px;
+              margin-bottom: 20px;
+              .Post-Footer_button {
+                width: 100px;
+                height: 100px;
+                margin: 0 0.4em;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-size: 15px;
+                background: transparent;
+                color: gray;
+                border: transparent;
+                svg {
+                  font-size: 20px;
+                }
+                .Post-Footer_button:hover {
+                  background: #e8e8e8;
+                }
+              }
+            }
+          }
+        }
+        .SinglePost-Header {
+          padding: 0 5em;
+          position: sticky;
+          top: 50px;
+          color: #fff;
+          background-color: #000;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          z-index: 100;
+          height: 40px;
+          .SinglePost-Header-UpDownWrappper {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            .UpDown {
+              svg {
+                opacity: 50%;
+                font-weight: 200;
+                transform: scale(1.5);
+                transition: color 0.2s;
+              }
+              svg:first-child:hover {
+                color: green;
+              }
+              svg:last-child:hover {
+                color: red;
+              }
+              span {
+                font-weight: 600;
+                margin: 0 0.5em;
+                vertical-align: middle;
+              }
+              display: flex;
+              justify-content: center;
+              align-items: center;
+            }
+            hr {
+              margin: 0 1em;
+              border: none;
+              border-left: 1px solid rgba(255, 255, 255, 0.449);
+              height: 20px;
+              width: 1px;
+            }
+          }
+          .SinglePost-Header_title {
+            color: #fff;
+            font-weight: 300;
+            font-size: 20px;
+          }
+          .SinglePost-Close {
+            display: flex;
+            align-items: center;
+            font-size: 20px;
+            align-items: center;
+            color: #fff;
+          }
+        }
+      }
+    }
+  }

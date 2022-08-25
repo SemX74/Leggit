@@ -1,0 +1,39 @@
+.NotFound-Wrapper {
+  display: flex;
+  height: 100vh;
+  background: rgb(116, 152, 190);
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 15em;
+}
+.NotFound-Wrapper .NotFound {
+  background: #fff;
+  border-radius: 20px;
+  text-align: center;
+  padding: 2em 5em;
+  box-shadow: 5px 5px 10px 0 rgba(0, 0, 0, 0.158);
+}
+.NotFound-Wrapper .NotFound h1 {
+  opacity: 70%;
+}
+.NotFound-Wrapper .NotFound p {
+  margin-top: 2em;
+  margin-bottom: 1.5em;
+  opacity: 70%;
+}
+.NotFound-Wrapper .NotFound .button {
+  text-decoration: none;
+  color: #fff;
+  background: #1484d6;
+  border: 1px solid #1484d6;
+  border-radius: 20px;
+  font-size: 17px;
+  font-weight: 600;
+  padding: 0.15em 1em;
+  cursor: pointer;
+  transition: 0.2s;
+}
+.NotFound-Wrapper .NotFound .button:hover {
+  background: #fff;
+  color: #1484d6;
+}/*# sourceMappingURL=NotFound.css.map */

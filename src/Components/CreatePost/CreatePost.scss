@@ -1,0 +1,30 @@
+$ButtonBlue: #1484d6;
+
+.CreatePost {
+  width: 600px;
+  max-height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5em;
+  margin: 0.6em 0;
+  border-radius: 5px;
+  border: 2px solid $ButtonBlue;
+  background: $ButtonBlue;
+  color: #fff;
+  font-size: 20px;
+  text-align: center;
+  cursor: pointer;
+  svg {
+    margin: 0 0.5em;
+    transition: 0.2s;
+  }
+  transition: 0.2s;
+}
+.CreatePost:hover {
+  background: #fff;
+  color: $ButtonBlue;
+}
+.CreatePost:hover svg {
+  transform: rotate(90deg);
+}

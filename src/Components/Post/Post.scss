@@ -1,0 +1,118 @@
+$ButtonBlue: #1484d6;
+
+.Post {
+  width: 600px;
+  max-height: 250px;
+  display: flex;
+  justify-content: center;
+  border-radius: 5px;
+  overflow: hidden;
+  margin: 0.6em 0;
+  .UpDown {
+    svg {
+      margin: 0.2em 0;
+      opacity: 50%;
+      font-weight: 200;
+      transform: scale(1.3);
+      transition: color 0.2s;
+    }
+    svg:first-child:hover {
+      color: green;
+    }
+    svg:last-child:hover {
+      color: red;
+    }
+    span {
+      font-weight: 600;
+      vertical-align: middle;
+    }
+    padding: 1em 0;
+    background: #f8f9fa;
+    width: 7%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+  }
+  .Post-right {
+    background: #fff;
+    width: 100%;
+    padding: 10px;
+    position: relative;
+    .Post-Footer {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      background: #fff;
+      height: 20px;
+      z-index: 1000;
+      .Post-Footer_button {
+        margin: 0 0.4em;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 15px;
+        background: transparent;
+        color: gray;
+        border: transparent;
+        svg {
+          font-size: 20px;
+        }
+        .Post-Footer_button:hover {
+          background: #e8e8e8;
+        }
+      }
+    }
+    .Post-Header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      .Post-Header-Info_wrapper {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .Post-Header_Info {
+          font-size: 13px;
+          font-weight: 700;
+          span {
+            opacity: 50%;
+            font-weight: 400;
+          }
+        }
+      }
+      .button {
+        margin: 0.4em;
+        color: #fff;
+        background: $ButtonBlue;
+        border: 1px solid $ButtonBlue;
+        border-radius: 20px;
+        font-size: 13px;
+        font-weight: 600;
+        padding: 0.15em 1em;
+        cursor: pointer;
+      }
+    }
+    .Post-Section {
+      width: 100%;
+      .Post-Description {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        max-height: 120px;
+      }
+      .Post-Description::before {
+        display: block;
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(
+          180deg,
+          rgba(255, 255, 255, 0) 0,
+          rgba(255, 255, 255, 0.5) 50%,
+          rgba(255, 255, 255, 1) 100%
+        );
+        z-index: 10;
+      }
+    }
+  }
+}

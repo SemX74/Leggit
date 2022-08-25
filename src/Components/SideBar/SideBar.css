@@ -1,0 +1,77 @@
+.Nav-Title {
+  text-transform: uppercase;
+  opacity: 50%;
+  font-size: 10px;
+  word-wrap: break-word;
+  margin-bottom: 0.5em;
+}
+
+.NavLink {
+  margin-bottom: 1em;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: #000;
+  font-size: 1rem;
+  font-weight: 400;
+}
+
+.SideMenu {
+  max-width: 15%;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 50px;
+  height: 100%;
+}
+.SideMenu .SideBar {
+  height: 95vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.SideMenu .SideBar .Nav {
+  height: 100%;
+  width: 100%;
+  padding: 1.2em 1.5em;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-right: 450px;
+}
+.SideMenu .SideBar .NavLink {
+  margin-bottom: 1em;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: #000;
+  font-size: 1rem;
+  font-weight: 400;
+}
+.SideMenu .SideBar .NavLink svg {
+  font-size: 2rem;
+  margin-right: 5px;
+}
+
+.Nav-Footer p {
+  margin-top: 0.5em;
+  font-size: 14px;
+  margin-bottom: 1.2em;
+}
+.Nav-Footer .button {
+  text-decoration: none;
+  color: #fff;
+  background: #1484d6;
+  border: 1px solid #1484d6;
+  border-radius: 20px;
+  font-size: 15px;
+  font-weight: 600;
+  padding: 0.25em 2em;
+  cursor: pointer;
+  transition: 0.2s;
+  word-wrap: none;
+}
+.Nav-Footer .button:hover {
+  background: #fff;
+  color: #1484d6;
+}/*# sourceMappingURL=SideBar.css.map */

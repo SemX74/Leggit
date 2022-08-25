@@ -1,0 +1,199 @@
+.ModalPost-wrapper {
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 10;
+}
+.ModalPost-wrapper .ModalPost-TopBar {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  width: 100%;
+  z-index: 100;
+}
+.ModalPost-wrapper .SinglePost-Background {
+  background: #000;
+  padding-bottom: 10em;
+  display: flex;
+  position: -webkit-sticky;
+  position: sticky;
+  justify-content: center;
+  align-items: flex-start;
+  background-size: contain;
+  background-attachment: fixed;
+  background-size: 110%;
+  width: 100%;
+  height: 100vh;
+  overflow: auto;
+}
+.ModalPost-wrapper .SinglePost-Background .SinglePost {
+  background: #fafafa;
+  width: 80%;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  padding-bottom: 2em;
+}
+.ModalPost-wrapper .SinglePost-Background .SinglePost .container {
+  margin: 3em auto;
+  width: 70%;
+  background: #fff;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+.ModalPost-wrapper .SinglePost-Background .SinglePost .container .SinglePost-UpDown {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  margin-right: 0.2em;
+}
+.ModalPost-wrapper .SinglePost-Background .SinglePost .container .SinglePost-UpDown .UpDown {
+  padding: 1em 0;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+.ModalPost-wrapper .SinglePost-Background .SinglePost .container .SinglePost-UpDown .UpDown svg {
+  margin: 0.5em 0;
+  opacity: 50%;
+  font-weight: 200;
+  transform: scale(1.5);
+  transition: color 0.2s;
+}
+.ModalPost-wrapper .SinglePost-Background .SinglePost .container .SinglePost-UpDown .UpDown svg:first-child:hover {
+  color: green;
+}
+.ModalPost-wrapper .SinglePost-Background .SinglePost .container .SinglePost-UpDown .UpDown svg:last-child:hover {
+  color: red;
+}
+.ModalPost-wrapper .SinglePost-Background .SinglePost .container .SinglePost-UpDown .UpDown span {
+  font-weight: 600;
+  vertical-align: middle;
+}
+.ModalPost-wrapper .SinglePost-Background .SinglePost .container .SinglePost-Post {
+  padding: 1em;
+  width: 90%;
+}
+.ModalPost-wrapper .SinglePost-Background .SinglePost .container .SinglePost-Post .Post-Header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.ModalPost-wrapper .SinglePost-Background .SinglePost .container .SinglePost-Post .Post-Header .Post-Header-Info_wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.ModalPost-wrapper .SinglePost-Background .SinglePost .container .SinglePost-Post .Post-Header .Post-Header-Info_wrapper .Post-Header_Info {
+  font-size: 13px;
+  font-weight: 700;
+}
+.ModalPost-wrapper .SinglePost-Background .SinglePost .container .SinglePost-Post .Post-Header .Post-Header-Info_wrapper .Post-Header_Info span {
+  opacity: 50%;
+  font-weight: 400;
+}
+.ModalPost-wrapper .SinglePost-Background .SinglePost .container .SinglePost-Post .Post-Header .button {
+  margin: 0.4em;
+  color: #fff;
+  background: #1484D6;
+  border: 1px solid #1484D6;
+  border-radius: 20px;
+  font-size: 13px;
+  font-weight: 600;
+  padding: 0.15em 1em;
+  cursor: pointer;
+}
+.ModalPost-wrapper .SinglePost-Background .SinglePost .container .SinglePost-Post .Post-Footer {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  background: #fff;
+  height: 20px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.ModalPost-wrapper .SinglePost-Background .SinglePost .container .SinglePost-Post .Post-Footer .Post-Footer_button {
+  width: 100px;
+  height: 100px;
+  margin: 0 0.4em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 15px;
+  background: transparent;
+  color: gray;
+  border: transparent;
+}
+.ModalPost-wrapper .SinglePost-Background .SinglePost .container .SinglePost-Post .Post-Footer .Post-Footer_button svg {
+  font-size: 20px;
+}
+.ModalPost-wrapper .SinglePost-Background .SinglePost .container .SinglePost-Post .Post-Footer .Post-Footer_button .Post-Footer_button:hover {
+  background: #e8e8e8;
+}
+.ModalPost-wrapper .SinglePost-Background .SinglePost .SinglePost-Header {
+  padding: 0 5em;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 50px;
+  color: #fff;
+  background-color: #000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 100;
+  height: 40px;
+}
+.ModalPost-wrapper .SinglePost-Background .SinglePost .SinglePost-Header .SinglePost-Header-UpDownWrappper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.ModalPost-wrapper .SinglePost-Background .SinglePost .SinglePost-Header .SinglePost-Header-UpDownWrappper .UpDown {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.ModalPost-wrapper .SinglePost-Background .SinglePost .SinglePost-Header .SinglePost-Header-UpDownWrappper .UpDown svg {
+  opacity: 50%;
+  font-weight: 200;
+  transform: scale(1.5);
+  transition: color 0.2s;
+}
+.ModalPost-wrapper .SinglePost-Background .SinglePost .SinglePost-Header .SinglePost-Header-UpDownWrappper .UpDown svg:first-child:hover {
+  color: green;
+}
+.ModalPost-wrapper .SinglePost-Background .SinglePost .SinglePost-Header .SinglePost-Header-UpDownWrappper .UpDown svg:last-child:hover {
+  color: red;
+}
+.ModalPost-wrapper .SinglePost-Background .SinglePost .SinglePost-Header .SinglePost-Header-UpDownWrappper .UpDown span {
+  font-weight: 600;
+  margin: 0 0.5em;
+  vertical-align: middle;
+}
+.ModalPost-wrapper .SinglePost-Background .SinglePost .SinglePost-Header .SinglePost-Header-UpDownWrappper hr {
+  margin: 0 1em;
+  border: none;
+  border-left: 1px solid rgba(255, 255, 255, 0.449);
+  height: 20px;
+  width: 1px;
+}
+.ModalPost-wrapper .SinglePost-Background .SinglePost .SinglePost-Header .SinglePost-Header_title {
+  color: #fff;
+  font-weight: 300;
+  font-size: 20px;
+}
+.ModalPost-wrapper .SinglePost-Background .SinglePost .SinglePost-Header .SinglePost-Close {
+  display: flex;
+  align-items: center;
+  font-size: 20px;
+  align-items: center;
+  color: #fff;
+}/*# sourceMappingURL=SinglePost.css.map */

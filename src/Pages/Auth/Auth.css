@@ -1,0 +1,108 @@
+.LoginWrapper {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+}
+.LoginWrapper .LoginWrapper-left {
+  background: white;
+  height: 100vh;
+  width: 50%;
+}
+.LoginWrapper .LoginWrapper-left .BackMain {
+  padding-top: 1em;
+  margin: 1em;
+  color: #000;
+  background: transparent;
+  display: flex;
+  align-items: center;
+  border: transparent;
+  font-weight: 500;
+  font-size: 20px;
+  cursor: pointer;
+}
+.LoginWrapper .LoginWrapper-left .BackMain svg {
+  margin: 0 0.3em;
+}
+.LoginWrapper .LoginWrapper-left h3 {
+  font-weight: 200;
+  font-size: 2em;
+  text-align: center;
+}
+.LoginWrapper .LoginWrapper-left .LoginWrapper-title {
+  margin-top: 2em;
+  font-size: 5em;
+  text-align: center;
+}
+.LoginWrapper .LoginWrapper-left .formLogin {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  margin: 4em auto;
+}
+.LoginWrapper .LoginWrapper-left .formLogin label {
+  margin-left: 0.2em;
+  margin-bottom: 0.2em;
+  opacity: 50%;
+}
+.LoginWrapper .LoginWrapper-left .formLogin .input {
+  font-size: 2em;
+  padding: 0.2em;
+  border: solid 1px rgba(0, 0, 0, 0.227);
+  border-radius: 5px;
+  margin-bottom: 0.2em;
+}
+.LoginWrapper .LoginWrapper-left .formLogin .input:focus {
+  outline: dotted;
+  border: transparent;
+  outline-color: #d16e4b;
+}
+.LoginWrapper .LoginWrapper-left .formLogin .error {
+  color: red;
+  margin: 0;
+}
+.LoginWrapper .LoginWrapper-left .formLogin .submit {
+  border-radius: 20px;
+  font-size: 1.5em;
+  width: 5em;
+  margin: 0.2em auto;
+  height: 2em;
+  background: #d16e4b;
+  border: 2px solid #d16e4b;
+  transition: 0.2s;
+  color: #fff;
+}
+.LoginWrapper .LoginWrapper-left .formLogin .submit:hover {
+  color: #d16e4b;
+  background: #fff;
+  border: 2px solid #d16e4b;
+}
+.LoginWrapper .LoginWrapper-left .formLogin .invalid {
+  background: #78655d;
+  color: white;
+  cursor: not-allowed;
+  border: #fff;
+}
+.LoginWrapper .LoginWrapper-left .formLogin .invalid:hover {
+  border: #fff;
+  background: #78655d;
+  color: white;
+}
+.LoginWrapper .LoginWrapper-left .formLogin .alreadyEx {
+  text-align: center;
+}
+.LoginWrapper .LoginWrapper-left .formLogin .link {
+  color: #d16e4b;
+  text-decoration: underline;
+  cursor: pointer;
+}
+.LoginWrapper .LoginWrapper-left .formLogin .link:active {
+  color: #6f4f2d;
+}
+.LoginWrapper .LoginWrapper-right {
+  background: url("../../Misc/reddit-2.webp");
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  width: 50%;
+}/*# sourceMappingURL=Auth.css.map */
