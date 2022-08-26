@@ -23,6 +23,7 @@ const Home: FC<HomeProps> = () => {
             description={post.description}
             id={post.id}
             score={0}
+            created={String(post.created)}
           />
         ))}
         <Outlet />

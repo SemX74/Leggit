@@ -1,7 +1,7 @@
 import { FC } from "react";
 import { TbArrowBigTop, TbArrowBigDown } from "react-icons/tb";
 import { useAppDispatch, useAppSelector } from "../Hooks/ReduxHook";
-import { addScore, decScore } from "../Slices/PostSlice";
+import { addScore, decScore, sortByName } from "../Slices/PostSlice";
 
 interface UpDownProps {
   id?: string;

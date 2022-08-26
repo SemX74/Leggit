@@ -14,7 +14,7 @@ const CreatePostPage: FC<CreatePostPageProps> = () => {
   const dispatch = useAppDispatch();
   const editor = useRef(null);
   const navigate = useNavigate();
-  const isValid: boolean = titleInput.length < 5;
+  const isValid: boolean =  5 > titleInput.length && titleInput.length > 30 ;
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) =>
     setTitleInput(e.target.value);

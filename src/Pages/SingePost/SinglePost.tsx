@@ -1,5 +1,5 @@
 import { FC, useEffect, useRef, useState } from "react";
-import { useNavigate, useParams } from "react-router-dom";
+import { Navigate, useNavigate, useParams } from "react-router-dom";
 import { VscChromeClose } from "react-icons/vsc";
 import List from "../../Components/List/List";
 import TopBar from "../../Components/TopBar/TopBar";
@@ -18,9 +18,10 @@ const SinglePost: FC<SinglePostProps> = () => {
   const [content, setContent] = useState("");
   const {postid} = useParams()
   const posts = useAppSelector((state) => state.posts.value);
-  const post = posts.find(el => el.id === postid)
-  console.log(posts);
-  
+  const post = posts.find(el => el.id === postid) 
+  if(!post){
+    return <Navigate to="/*" replace={true} />
+  }
 
   return (
     <div className="ModalPost-wrapper">
@@ -43,7 +44,7 @@ const SinglePost: FC<SinglePostProps> = () => {
               <UpDown />
             </section>
             <section className="SinglePost-Post">
-              <PostHeader />
+              <PostHeader created={String(post?.created)}/>
               <h1 className="Post-Title">{post?.title}</h1>
               <p>{typeof post?.description === "string" && parse(post?.description)}</p>
               <PostFooter />
