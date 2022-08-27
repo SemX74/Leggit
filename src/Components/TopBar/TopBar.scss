@@ -70,10 +70,12 @@ $ButtonBlue: #1484d6;
     padding: 0 20px;
     svg {
       height: 100%;
+      opacity: 50%;
       width: auto;
     }
   }
 }
+
 .HeaderMenu {
   position: relative;
   width: 190px;

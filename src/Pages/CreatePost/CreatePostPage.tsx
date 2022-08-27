@@ -2,7 +2,7 @@ import JoditEditor from "jodit-react";
 import { FC, useRef, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { useAppDispatch } from "../../Hooks/ReduxHook";
-import { addPost } from "../../Slices/PostSlice";
+import { addPost, sortByName } from "../../Slices/PostSlice";
 import "./CreatePost.css";
 
 interface CreatePostPageProps {}
@@ -20,7 +20,9 @@ const CreatePostPage: FC<CreatePostPageProps> = () => {
     setTitleInput(e.target.value);
   const handleSubmit = () => {
     dispatch(addPost({ title: titleInput, description: content }));
+    dispatch(sortByName('newest'))
     navigate("/");
+    
   };
   return (
     <section className="CreatePostPage">

@@ -80,6 +80,7 @@
 }
 .Header-Profile .Header-Profile-wrapper svg {
   height: 100%;
+  opacity: 50%;
   width: auto;
 }
 

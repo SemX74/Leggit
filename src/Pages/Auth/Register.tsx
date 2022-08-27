@@ -6,6 +6,7 @@ import "./Auth.css";
 interface LoginProps {}
 
 type Inputs = {
+  email:string;
   username: string;
   password: string;
 };
@@ -29,6 +30,27 @@ const Login = () => {
         <h1 className="LoginWrapper-title">Welcome!</h1>
         <h3>Register</h3>
         <form className="formLogin" action="">
+        <label>Email</label>
+          <input
+          type="email"
+            style={
+              errors?.email
+                ? { background: "#ffcfcf" }
+                : { background: "white" }
+            }
+            className="input"
+            {...register("email", {
+              required: "Email is requied",
+              minLength: {
+                value: 5,
+                message: "Email has to contain at least 5 symbols!",
+              },
+              maxLength: {
+                value: 15,
+                message: "Email has to contain at least 15 symbols!",
+              },
+            })}
+          />
           <label>Username</label>
           <input
             style={

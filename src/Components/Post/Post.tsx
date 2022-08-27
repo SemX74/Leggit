@@ -2,8 +2,8 @@ import { FC } from "react";
 import UpDown from "../UpDown";
 import parse from "html-react-parser";
 
-import { Link, useLocation, useNavigate } from "react-router-dom";
-import { addPost, deletePost, IPostValue } from "../../Slices/PostSlice";
+import { useLocation, useNavigate } from "react-router-dom";
+import { IPostValue } from "../../Slices/PostSlice";
 import PostFooter from "../PostFooter";
 import PostHeader from "../PostHeader";
 import "./Post.css";

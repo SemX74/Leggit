@@ -1,5 +1,6 @@
 import { FC, useState } from "react";
 import { VscAccount } from "react-icons/vsc";
+import { BiLogOut } from "react-icons/bi";
 import {
   BsChevronCompactDown,
   BsMoon,
@@ -11,12 +12,14 @@ import { Link, useNavigate } from "react-router-dom";
 import { TiDocumentText } from "react-icons/ti";
 import "./TopBar.css";
 import Logo from "../Logo/Logo";
+import { useAuth } from "../../Hooks/useAuth";
 
 interface TopBarProps {}
 
 const TopBar: FC<TopBarProps> = () => {
   const [isOpened, setIsOpened] = useState(false);
   const navigate = useNavigate();
+  const Auth = useAuth();
   return (
     <header className="Header">
       <Logo />
@@ -68,6 +71,14 @@ const TopBar: FC<TopBarProps> = () => {
               <Link className="HeaderMenu_option" to="/">
                 <BsThreeDots />
                 Other
+              </Link>
+              <Link
+                onClick={() => Auth?.signOut()}
+                className="HeaderMenu_option"
+                to="/"
+              >
+                <BiLogOut />
+                Log Out
               </Link>
             </ul>
           </menu>

@@ -8,26 +8,37 @@ import Layout from "./Pages/Layout";
 import NotFound from "./Pages/NotFound/NotFound";
 import Popular from "./Pages/Popular";
 import SinglePost from "./Pages/SingePost/SinglePost";
+import RequireAuth from "./Components/RequireAuth";
+import AuthProvider from "./Components/AuthProvider";
 import "./Style/App.css";
 
 interface AppProps {}
 const App: FC<AppProps> = () => {
   return (
-    <div>
-      <Routes>
-        <Route path="/" element={<Layout />}>
-          <Route path="/" element={<Home />} />
-          <Route path="popular" element={<Popular />} />
-          <Route path="addPost" element={<CreatePostPage />} />
-        </Route>
-        <Route path="modal"></Route>
-        <Route path="modal/:postid" element={<SinglePost />} />
-        <Route path="login" element={<Login />} />
-        <Route path="register" element={<Register />} />
+    <>
+      <AuthProvider>
+        <Routes>
+          <Route path="/" element={<Layout />}>
+            <Route path="/" element={<Home />} />
+            <Route path="popular" element={<Popular />} />
+            <Route
+              path="addPost"
+              element={
+                <RequireAuth>
+                  <CreatePostPage />
+                </RequireAuth>
+              }
+            />
+          </Route>
+          <Route path="modal"></Route>
+          <Route path="modal/:postid" element={<SinglePost />} />
+          <Route path="login" element={<Login />} />
+          <Route path="register" element={<Register />} />
 
-        <Route path="/*" element={<NotFound />} />
-      </Routes>
-    </div>
+          <Route path="/*" element={<NotFound />} />
+        </Routes>
+      </AuthProvider>
+    </>
   );
 };
 
