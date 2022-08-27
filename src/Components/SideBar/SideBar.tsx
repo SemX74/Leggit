@@ -3,10 +3,12 @@ import { Link, NavLink, useNavigate } from "react-router-dom";
 import { BsArrowUpRight } from "react-icons/bs";
 import { AiTwotoneHome } from "react-icons/ai";
 import "./SideBar.css";
+import { useAuth } from "../../Hooks/useAuth";
 interface SideBarProps {}
 
 const SideBar: FC<SideBarProps> = () => {
-  const navigate = useNavigate()
+  const navigate = useNavigate();
+  const Auth = useAuth();
   return (
     <div className="SideBar">
       <nav className="Nav">
@@ -23,14 +25,18 @@ const SideBar: FC<SideBarProps> = () => {
           <span className="Nav-Title">RECENT COMMUNITIES</span>
           <span className="Nav-Title">Explore</span>
         </div>
-        <aside className="Nav-Footer">
-          <span className="Nav-Title">Join Leggit</span>
-          <p>
-            Create an account to follow your favorite communities and start
-            taking part in conversations.
-          </p>
-          <button className='button' onClick={() => navigate("register")}>Create an account </button>
-        </aside>
+        {!Auth?.user && (
+          <aside className="Nav-Footer">
+            <span className="Nav-Title">Join Leggit</span>
+            <p>
+              Create an account to follow your favorite communities and start
+              taking part in conversations.
+            </p>
+            <button className="button" onClick={() => navigate("register")}>
+              Create an account{" "}
+            </button>
+          </aside>
+        )}
       </nav>
     </div>
   );

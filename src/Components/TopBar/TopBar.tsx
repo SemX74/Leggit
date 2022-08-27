@@ -27,24 +27,26 @@ const TopBar: FC<TopBarProps> = () => {
       <div className="Header-Search_wrapper">
         <input placeholder="🔎Search Leggit ..." type="search" />
       </div>
-      <div className="Header-Registration_wrapper">
-        <button
-          onClick={() => {
-            navigate("/login", { replace: true });
-          }}
-          className="LogIn  button"
-        >
-          Log In
-        </button>
-        <button
-          onClick={() => {
-            navigate("/register", { replace: true });
-          }}
-          className="SignUp button"
-        >
-          Sign Up
-        </button>
-      </div>
+      {!Auth?.user && (
+        <div className="Header-Registration_wrapper">
+          <button
+            onClick={() => {
+              navigate("/login", { replace: true });
+            }}
+            className="LogIn  button"
+          >
+            Log In
+          </button>
+          <button
+            onClick={() => {
+              navigate("/register", { replace: true });
+            }}
+            className="SignUp button"
+          >
+            Sign Up
+          </button>
+        </div>
+      )}
       <div
         onClick={() => setIsOpened((prev) => !prev)}
         className="Header-Profile"
@@ -72,14 +74,16 @@ const TopBar: FC<TopBarProps> = () => {
                 <BsThreeDots />
                 Other
               </Link>
-              <Link
-                onClick={() => Auth?.signOut()}
-                className="HeaderMenu_option"
-                to="/"
-              >
-                <BiLogOut />
-                Log Out
-              </Link>
+              {Auth?.user && (
+                <Link
+                  onClick={() => Auth?.signOut()}
+                  className="HeaderMenu_option"
+                  to="/"
+                >
+                  <BiLogOut />
+                  Log Out
+                </Link>
+              )}
             </ul>
           </menu>
         )}

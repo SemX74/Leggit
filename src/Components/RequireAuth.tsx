@@ -10,6 +10,8 @@ export interface RequireAuthProps {
 const RequireAuth: FC<RequireAuthProps> = ({ children }) => {
   const location = useLocation();
   const Auth = useAuth();
+  console.log(Auth?.user);
+  
   if (!Auth?.user) {
     return <Navigate to="/login" state={{ from: location.pathname }} />;
   }

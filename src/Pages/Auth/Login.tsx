@@ -25,7 +25,6 @@ const Login: FC<LoginProps> = () => {
   const navigate = useNavigate();
   const location = useLocation().state as stateType;
   const Auth = useAuth();
-  console.log(location?.from);
 
   const onSubmit: SubmitHandler<Inputs> = () => {
     Auth?.signIn();

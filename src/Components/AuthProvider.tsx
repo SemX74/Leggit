@@ -12,7 +12,7 @@ export interface AuthContextProps {
 
 export const AuthContext = createContext<AuthContextProps | null>(null);
 const AuthProvider: FC<AuthProviderProps> = ({ children }) => {
-  const [user, setUser] = useState(true);
+  const [user, setUser] = useState(false);
   const signIn = () => setUser(true);
   const signOut = () => setUser(false);
   const value = { user, signIn, signOut };
