@@ -1,7 +1,7 @@
 import { FC } from "react";
 import { useLocation, Navigate } from "react-router-dom";
 import { useAuth } from "../Hooks/useAuth";
-import { AuthContextProps } from "./AuthProvider";
+import { AuthContextProps } from "../Contexts/AuthProvider";
 
 export interface RequireAuthProps {
   children: JSX.Element;
@@ -10,8 +10,6 @@ export interface RequireAuthProps {
 const RequireAuth: FC<RequireAuthProps> = ({ children }) => {
   const location = useLocation();
   const Auth = useAuth();
-  console.log(Auth?.user);
-  
   if (!Auth?.user) {
     return <Navigate to="/login" state={{ from: location.pathname }} />;
   }

@@ -68,7 +68,8 @@
   width: 90px;
   margin-right: 2em;
   height: 100%;
-  transition: 0.2s;
+  border: 1px solid rgba(0, 0, 0, 0);
+  transition: border 0.2s;
 }
 .Header-Profile .Header-Profile-wrapper {
   display: flex;
@@ -79,9 +80,13 @@
   padding: 0 20px;
 }
 .Header-Profile .Header-Profile-wrapper svg {
-  height: 100%;
   opacity: 50%;
+  height: 100%;
   width: auto;
+}
+
+.Header-Profile:hover {
+  border: 1px solid rgba(0, 0, 0, 0.238);
 }
 
 .HeaderMenu {
@@ -113,6 +118,14 @@
   color: #fff;
 }
 
-.Header-Profile:hover {
-  border: 1px solid rgba(0, 0, 0, 0.238);
+.RegisteredNav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 60%;
+}
+.RegisteredNav svg {
+  margin: 0 0.8em;
+  height: 100%;
+  width: auto;
 }/*# sourceMappingURL=TopBar.css.map */

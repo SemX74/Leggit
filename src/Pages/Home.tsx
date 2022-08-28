@@ -5,17 +5,18 @@ import CreatePost from "../Components/CreatePost/CreatePost";
 import Post from "../Components/Post/Post";
 import SortBy from "../Components/SortBy/SortBy";
 import { useAppSelector } from "../Hooks/ReduxHook";
+import { useAuth } from "../Hooks/useAuth";
 import { IPostValue } from "../Slices/PostSlice";
 
 interface HomeProps {}
 
 const Home: FC<HomeProps> = () => {
   const posts: IPostValue[] = useAppSelector((state) => state.posts.value);
-
+  const Auth = useAuth()
   return (
     <div className="Home">
       <main className="Home-Main">
-        <CreatePost />
+        {Auth?.user && <CreatePost />}
         {posts.map((post) => (
           <Post
             key={post.id}

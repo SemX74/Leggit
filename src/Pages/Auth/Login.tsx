@@ -2,6 +2,7 @@ import { FC } from "react";
 import { useForm, SubmitHandler } from "react-hook-form";
 import { BsArrowLeft } from "react-icons/bs";
 import { useLocation, useNavigate } from "react-router-dom";
+import { useAppSelector } from "../../Hooks/ReduxHook";
 import { useAuth } from "../../Hooks/useAuth";
 import "./Auth.css";
 
@@ -9,7 +10,7 @@ type Inputs = {
   username: string;
   password: string;
 };
-interface stateType {
+export interface stateType {
   from: string;
 }
 interface LoginProps {}
@@ -25,10 +26,13 @@ const Login: FC<LoginProps> = () => {
   const navigate = useNavigate();
   const location = useLocation().state as stateType;
   const Auth = useAuth();
+  const error = useAppSelector((state) => state.users.error);
 
-  const onSubmit: SubmitHandler<Inputs> = () => {
-    Auth?.signIn();
-    navigate(`${location.from}`, { replace: true });
+  const onSubmit: SubmitHandler<Inputs> = (data) => {
+    Auth?.signIn(data);
+    navigate(`${location.from}`, {
+      replace: true,
+    });
   };
   return (
     <div className="LoginWrapper">
@@ -108,6 +112,7 @@ const Login: FC<LoginProps> = () => {
               </p>
             )}
           </div>
+          <p style={{ color: "red" }}>{error}</p>
 
           <button
             type="submit"

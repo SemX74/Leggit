@@ -9,7 +9,7 @@ import NotFound from "./Pages/NotFound/NotFound";
 import Popular from "./Pages/Popular";
 import SinglePost from "./Pages/SingePost/SinglePost";
 import RequireAuth from "./Components/RequireAuth";
-import AuthProvider from "./Components/AuthProvider";
+import AuthProvider from "./Contexts/AuthProvider";
 import "./Style/App.css";
 
 interface AppProps {}

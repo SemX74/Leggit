@@ -1,13 +1,15 @@
 import { configureStore } from '@reduxjs/toolkit'
 import CommentsReducer from "../Slices/CommentSlice"
 import PostReducer from "../Slices/PostSlice"
+import UserReducer from "../Slices/UserSlice"
 
 
 export const store = configureStore({
 
   reducer: {
     comments:CommentsReducer,
-    posts: PostReducer
+    posts: PostReducer,
+    users: UserReducer
   },
   devTools:true,
   middleware: (getDefaultMiddleware) =>

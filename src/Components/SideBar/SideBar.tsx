@@ -1,5 +1,5 @@
 import { FC } from "react";
-import { Link, NavLink, useNavigate } from "react-router-dom";
+import { Link, NavLink, useLocation, useNavigate } from "react-router-dom";
 import { BsArrowUpRight } from "react-icons/bs";
 import { AiTwotoneHome } from "react-icons/ai";
 import "./SideBar.css";
@@ -9,6 +9,7 @@ interface SideBarProps {}
 const SideBar: FC<SideBarProps> = () => {
   const navigate = useNavigate();
   const Auth = useAuth();
+  const location = useLocation();
   return (
     <div className="SideBar">
       <nav className="Nav">
@@ -32,7 +33,15 @@ const SideBar: FC<SideBarProps> = () => {
               Create an account to follow your favorite communities and start
               taking part in conversations.
             </p>
-            <button className="button" onClick={() => navigate("register")}>
+            <button
+              className="button"
+              onClick={() => {
+                navigate("/register", {
+                  replace: true,
+                  state: { from: location.pathname },
+                });
+              }}
+            >
               Create an account{" "}
             </button>
           </aside>
