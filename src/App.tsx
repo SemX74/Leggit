@@ -10,7 +10,10 @@ import Popular from "./Pages/Popular";
 import SinglePost from "./Pages/SingePost/SinglePost";
 import RequireAuth from "./Components/RequireAuth";
 import AuthProvider from "./Contexts/AuthProvider";
+import UserLayout from "./Pages/UserLayout/UserLayout";
+import UserPosts from "./Components/UserPosts";
 import "./Style/App.css";
+import ProfileSettings from "./Pages/ProfileSettings/ProfileSettings";
 
 interface AppProps {}
 const App: FC<AppProps> = () => {
@@ -29,6 +32,28 @@ const App: FC<AppProps> = () => {
                 </RequireAuth>
               }
             />
+            <Route
+              path="profileSettings"
+              element={
+                <RequireAuth>
+                  <ProfileSettings />
+                </RequireAuth>
+              }
+            />
+            <Route
+              path="user"
+              element={
+                <RequireAuth>
+                  <UserLayout />
+                </RequireAuth>
+              }
+            >
+              <Route path="overview" element={<UserPosts />} />
+              <Route path="posts" element={<UserPosts />} />
+              <Route path="saved" element={<UserPosts />} />
+              <Route path="comments" element={<UserPosts />} />
+              <Route path="hidden" element={<UserPosts />} />
+            </Route>
           </Route>
           <Route path="modal"></Route>
           <Route path="modal/:postid" element={<SinglePost />} />

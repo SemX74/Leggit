@@ -1,0 +1,35 @@
+.ProfileSettings-main {
+  padding-top: 1em;
+  text-align: center;
+  background-color: #fff;
+  width: 100%;
+  height: 100vh;
+  margin: auto;
+}
+.ProfileSettings-main h1 {
+  margin-bottom: 2em;
+}
+
+.settings {
+  flex-direction: column;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.settings label {
+  width: 1200px;
+  padding: 1em;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.28);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.settings label input {
+  border-radius: 10px;
+  outline: transparent;
+  border: 1px solid rgba(0, 0, 0, 0.268);
+  margin: 0 1em;
+  width: 500px;
+  font-size: 25px;
+  padding: 0.25em;
+}/*# sourceMappingURL=ProfileSettings.css.map */

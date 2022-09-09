@@ -1,0 +1,30 @@
+.WelcomeHome {
+  width: 300px;
+  background: #fff;
+  border-radius: 10px;
+  margin-top: 20px;
+  margin-left: 20px;
+  overflow: hidden;
+  padding-bottom: 1em;
+}
+.WelcomeHome figure {
+  background: rgb(176, 83, 222);
+}
+.WelcomeHome article {
+  padding-left: 1em;
+  padding-top: 0.6em;
+}
+.WelcomeHome article h1 {
+  margin-bottom: 0.2em;
+}
+.WelcomeHome .buttons_wrapper {
+  margin-top: 0.5em;
+  flex-direction: column;
+  display: flex;
+  justify-content: center;
+  padding: 0 1em;
+}
+.WelcomeHome .buttons_wrapper button:last-child {
+  background: #fff;
+  color: #1484d6;
+}/*# sourceMappingURL=WelcomeHome.css.map */

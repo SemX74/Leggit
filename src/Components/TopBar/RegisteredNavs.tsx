@@ -14,7 +14,7 @@ const RegisteredNavs: FC<RegisteredNavsProps> = () => {
         <nav className="RegisteredNav">
             <AiOutlinePlus onClick={() => navigate("AddPost")}/>
             <MdNotificationsNone />
-            <AiOutlineMessage />
+            <AiOutlineMessage onClick={() => navigate("chat")} />
         </nav>  
      );
 }

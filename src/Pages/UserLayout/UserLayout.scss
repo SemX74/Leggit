@@ -1,0 +1,42 @@
+$ButtonBlue: #1484d6;
+.UserLayout {
+  width: 100%;
+  height: 100%;
+}
+.UserOutlet {
+  overflow: auto;
+  background: #dae0e6;
+  height: 100%;
+  width: 100%;
+  padding-bottom: 10em;
+}
+.UserLayout-header {
+  width: 100%;
+  background: #fff;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .UserLayout_NavLink {
+    margin: 0 1em;
+    text-decoration: none;
+    color: #000;
+    font-weight: 600;
+  }
+  .UserLayout_NavLink::first-letter {
+    text-transform: capitalize;
+  }
+  .active {
+    color: $ButtonBlue;
+    position: relative;
+  }
+  .active::after{
+    display: block;
+    content: "";
+    width: 100%;
+    position: absolute;
+    background-color: $ButtonBlue;
+    height: 2px;
+    bottom: -10px;
+  }
+}

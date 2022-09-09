@@ -7,6 +7,7 @@ import { stateType } from "./Login";
 
 import "./Auth.css";
 import { useAppSelector } from "../../Hooks/ReduxHook";
+import axios from "axios";
 interface LoginProps {}
 
 type Inputs = {
@@ -27,7 +28,24 @@ const Login: FC<LoginProps> = () => {
   const Auth = useAuth();
   const error = useAppSelector((state) => state.users.error);
 
+  const URL = "https://8878-46-211-173-201.eu.ngrok.io/api/v1/login";
+
   const onSubmit: SubmitHandler<Inputs> = (data) => {
+    const headers = {
+      "Access-Control-Allow-Origin": "localhost:8081",
+    };
+
+    axios
+      .post(
+        URL,
+        {
+          username: data.username,
+          password: data.password,
+        },
+        { headers }
+      )
+      .then((data) => console.log(data))
+      .catch((er) => console.log(er));
     Auth?.signUp(data);
     navigate(`${location.from}`, { replace: true });
   };

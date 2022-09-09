@@ -13,7 +13,6 @@ interface PostProps {}
 const Post: FC<IPostValue> = ({ id, description, title, created }) => {
   let navigate = useNavigate();
   const location = useLocation();
-  console.log(location);
   return (
     <article className="Post">
       <UpDown id={id} />

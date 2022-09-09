@@ -1,9 +1,10 @@
-import { FC, useState } from "react";
+import { FC } from "react";
 import { Outlet } from "react-router-dom";
 import CreatePost from "../Components/CreatePost/CreatePost";
 
 import Post from "../Components/Post/Post";
 import SortBy from "../Components/SortBy/SortBy";
+import WelcomeHome from "../Components/Widgets/WelcomeHome/Welcomehome";
 import { useAppSelector } from "../Hooks/ReduxHook";
 import { useAuth } from "../Hooks/useAuth";
 import { IPostValue } from "../Slices/PostSlice";
@@ -12,11 +13,12 @@ interface HomeProps {}
 
 const Home: FC<HomeProps> = () => {
   const posts: IPostValue[] = useAppSelector((state) => state.posts.value);
-  const Auth = useAuth()
+  const Auth = useAuth();
   return (
     <div className="Home">
       <main className="Home-Main">
         {Auth?.user && <CreatePost />}
+        <SortBy />
         {posts.map((post) => (
           <Post
             key={post.id}
@@ -29,7 +31,7 @@ const Home: FC<HomeProps> = () => {
         ))}
         <Outlet />
       </main>
-      <SortBy />
+      <WelcomeHome />
     </div>
   );
 };

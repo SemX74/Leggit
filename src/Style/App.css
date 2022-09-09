@@ -96,4 +96,24 @@ svg:hover {
 
 .SideButton:hover {
   color: red;
+}
+
+.NoPost {
+  padding: 1em 2em;
+  background: #FFF;
+  border-radius: 10px;
+}
+.NoPost h1 {
+  font-weight: 200;
+}
+
+.button {
+  background-color: #1484d6;
+  color: #fff;
+  margin: 0.4em;
+  border: 1px solid #1484d6;
+  border-radius: 20px;
+  font-size: 17px;
+  padding: 0.15em 1em;
+  cursor: pointer;
 }/*# sourceMappingURL=App.css.map */

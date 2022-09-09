@@ -1,0 +1,34 @@
+.Profile {
+  width: 300px;
+  background: #fff;
+  border-radius: 10px;
+  margin-top: 20px;
+  margin-left: 20px;
+  overflow: hidden;
+  padding-bottom: 1em;
+}
+.Profile figure {
+  background: rgb(240, 151, 16);
+}
+.Profile article {
+  padding-left: 1em;
+  padding-top: 0.6em;
+}
+.Profile article h1 {
+  margin-bottom: 0.2em;
+}
+.Profile .buttons_wrapper {
+  margin-top: 0.5em;
+  flex-direction: column;
+  display: flex;
+  justify-content: center;
+  padding: 0 1em;
+  transition: 0.2s;
+}
+.Profile .buttons_wrapper button {
+  transition: 0.2s;
+}
+.Profile .buttons_wrapper button:hover {
+  background: #fff;
+  color: #1484d6;
+}/*# sourceMappingURL=Profile.css.map */

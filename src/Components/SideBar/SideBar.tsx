@@ -24,6 +24,7 @@ const SideBar: FC<SideBarProps> = () => {
             Popular
           </NavLink>
           <span className="Nav-Title">RECENT COMMUNITIES</span>
+          <br />
           <span className="Nav-Title">Explore</span>
         </div>
         {!Auth?.user && (

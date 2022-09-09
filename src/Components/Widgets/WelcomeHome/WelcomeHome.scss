@@ -1,0 +1,33 @@
+$ButtonBlue: #1484d6;
+.WelcomeHome {
+  width: 300px;
+  background: #fff;
+  border-radius: 10px;
+  margin-top: 20px;
+  margin-left: 20px;
+  overflow: hidden;
+  padding-bottom: 1em;
+
+  figure {
+    background: rgb(176, 83, 222);
+  }
+  article {
+    padding-left: 1em;
+    padding-top: .6em;
+    h1{
+      margin-bottom: .2em;
+    }
+  }
+  .buttons_wrapper {
+    margin-top: .5em;
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+    padding: 0 1em;
+
+    button:last-child {
+      background: #fff;
+      color: $ButtonBlue;
+    }
+  }
+}

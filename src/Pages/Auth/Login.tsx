@@ -4,6 +4,8 @@ import { BsArrowLeft } from "react-icons/bs";
 import { useLocation, useNavigate } from "react-router-dom";
 import { useAppSelector } from "../../Hooks/ReduxHook";
 import { useAuth } from "../../Hooks/useAuth";
+import axios from "axios";
+
 import "./Auth.css";
 
 type Inputs = {
@@ -28,7 +30,21 @@ const Login: FC<LoginProps> = () => {
   const Auth = useAuth();
   const error = useAppSelector((state) => state.users.error);
 
+  const URL = "https://ffce-46-211-170-1.eu.ngrok.io/api/v1/login";
+
   const onSubmit: SubmitHandler<Inputs> = (data) => {
+    axios
+      .post(
+        URL,
+        {
+          username: data.username,
+          password: data.password,
+        },
+        { headers: { "Content-Type": "application/json" } }
+      )
+      .then((data) => console.log(data))
+      .catch((er) => console.log(er));
+
     Auth?.signIn(data);
     navigate(`${location.from}`, {
       replace: true,

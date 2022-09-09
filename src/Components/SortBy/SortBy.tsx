@@ -1,4 +1,7 @@
 import { FC, useState } from "react";
+import { AiOutlineStar } from "react-icons/ai";
+import { BiTimeFive } from "react-icons/bi";
+import { FcAlphabeticalSortingAz } from "react-icons/fc";
 import { useAppDispatch } from "../../Hooks/ReduxHook";
 import { sortByName } from "../../Slices/PostSlice";
 import "./SortBy.css";
@@ -17,24 +20,34 @@ const SortBy: FC<SortByProps> = () => {
   };
   return (
     <aside className="SortBy">
-      <span>Sort By:</span>
-      <ul className="SortBy_list">
-        <li onClick={() => handleSelect("az")} className={selectedOption("az")}>
-          A-Z
-        </li>
-        <li
-          onClick={() => handleSelect("rating")}
-          className={selectedOption("rating")}
-        >
-          Rating
-        </li>
-        <li
-          onClick={() => handleSelect("newest")}
-          className={selectedOption("newest")}
-        >
-          Newest
-        </li>
-      </ul>
+      <section>
+        <span>Sort By:</span>
+      </section>
+      <div className="SortBy_wrapper">
+        <ul className="SortBy_list">
+          <li
+            onClick={() => handleSelect("az")}
+            className={selectedOption("az")}
+          >
+            <FcAlphabeticalSortingAz />
+            A-Z
+          </li>
+          <li
+            onClick={() => handleSelect("rating")}
+            className={selectedOption("rating")}
+          >
+            <AiOutlineStar />
+            Rating
+          </li>
+          <li
+            onClick={() => handleSelect("newest")}
+            className={selectedOption("newest")}
+          >
+            <BiTimeFive />
+            Newest
+          </li>
+        </ul>
+      </div>
     </aside>
   );
 };
